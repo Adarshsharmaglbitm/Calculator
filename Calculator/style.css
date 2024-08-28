@@ -1,0 +1,95 @@
+/* Root Variables */
+:root {
+    --background-primary: #1e2a38; /* Deep Blue */
+    --background-secondary: #283d50; /* Lighter Blue */
+    --button-bg: #1f3a6c; /* Darker Blue */
+    --button-bg-hover: #2b4a7d; /* Slightly Lighter Blue */
+    --button-text: #f4f4f4; /* Light Gray */
+    --output-bg: #14212b; /* Very Dark Blue */
+    --output-text-primary: #e0e0e0; /* Off-White */
+    --output-text-secondary: #a2a2a2; /* Gray */
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Reset styles */
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body */
+  body {
+    font-family: var(--font-family);
+    background: var(--background-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Calculator */
+  .calculator {
+    background: var(--background-secondary);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Output Display */
+  .calculator-output {
+    background-color: var(--output-bg);
+    color: var(--output-text-primary);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    min-height: 120px;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+  
+  .previous-operand {
+    color: var(--output-text-secondary);
+    font-size: 1.5rem;
+  }
+  
+  .current-operand {
+    font-size: 3rem;
+    color: var(--output-text-primary);
+  }
+  
+  /* Grid Layout */
+  .calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  /* Buttons */
+  button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    padding: 20px;
+    font-size: 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: var(--button-bg-hover);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .span-two {
+    grid-column: span 2;
+  }
+  
